@@ -1,0 +1,76 @@
+.card-first-extra-container {
+    width: 250px;
+    height:200px;
+    perspective: 1000px;
+}
+
+
+#card1{
+    height: 100%;
+    width: 100%;
+    position:relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50);
+    position:absolute;
+    backface-visibility: hidden;
+}
+
+.back{
+    background-image: url('catshark.webp');
+    background-size: 250px 200px;
+    transform: rotateY(180deg);
+}
+
+body {
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-first-extra-container:hover > #card1 {
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.front {
+    border: 1px solid darkgray;
+    border-radius:2px;
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+}
+
+.IM-class {
+    text-align: center;
+}
+
+.card-class {
+    font-family: 'Josefin Sans';
+    letter-spacing: 6px;
+    color:rgb(44, 49, 94);
+    margin-top:5px;
+    font-size:20px;
+    text-align: center;
+}
+
+#capital-i-id, #capital-m-id {
+    font-family:'Exo 2';
+    color:rgb(44, 49, 94);
+    letter-spacing: 1.5px;
+}
+
+#capital-i-id {
+    font-size: 30px;
+}
+
+#capital-m-id {
+    font-size: 35px;
+}
