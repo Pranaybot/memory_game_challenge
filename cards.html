@@ -1,87 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Image Matching</title>
-        <link rel="stylesheet" href="styles.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600&family=Josefin+Sans&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="cards">
-            <div class="card-container">
-                <div class="card-extra-container">
-                    <div class="card-extra-sheet-container">
-                        <div class="card-first-extra-container">
-                            <div id="card1">
-                                <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
-                                <p class="card-class">Card</p>
-                            </div>
-                            <div id="card2">
-                                <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
-                                <p class="card-class">Card</p>
-                            </div>
-                            <div id="card3">
-                                <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
-                                <p class="card-class">Card</p>
-                            </div>
-                            <div id="card4">
-                                <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
-                                <p class="card-class">Card</p>
-                            </div>
-                            <div id="card5">
-                                <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
-                                <p class="card-class">Card</p>
-                            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600&family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="outer-container">
+            <div class="memory-container">
+                <section class="memory-game">
+                    <div class="memory-card" data-attribute="catshark">
+                        <div class="back">
+                            <img src="catshark.webp" alt="catshark" width="150" height="100">
                         </div>
-                        <div class="card-second-extra-container">
-                            <div id="card6">
-                                <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
-                                <p class="card-class">Card</p>
-                            </div>
-                            <div id="card7">
-                                <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
-                                <p class="card-class">Card</p>
-                            </div>
-                            <div id="time">
-                                <h6>Time</h6>
-                            </div>
-                            <div id="card8">
-                                <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
-                                <p class="card-class">Card</p>
-                            </div>
-                            <div id="card9">
-                                <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
-                                <p class="card-class">Card</p>
-                            </div>
-                        </div>
-                        <div class="card-third-extra-container">
-                            <div id="card10">
-                                <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
-                                <p class="card-class">Card</p>
-                            </div>
-                            <div id="card11">
-                                <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
-                                <p class="card-class">Card</p>
-                            </div>
-                            <div id="card12">
-                                <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
-                                <p class="card-class">Card</p>
-                            </div>
-                            <div id="card13">
-                                <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
-                                <p class="card-class">Card</p>
-                            </div>
-                            <div id="card14">
-                                <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
-                                <p class="card-class">Card</p>
-                            </div>
+                        <div class="front">
+                            <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
+                            <p class="card-class">Card</p>
                         </div>
                     </div>
-                </div>
+
+                    <div class="memory-card" data-attribute="tiger">
+                        <div class="back">
+                            <img src="great_tiger.jpeg" alt="tiger" width="150" height="100">
+                        </div>
+                        <div class="front">
+                            <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
+                            <p class="card-class">Card</p>
+                        </div>
+                    </div>
+                    
+                    <div class="memory-card" data-attribute="catshark">
+                        <div class="back">
+                            <img src="catshark.webp" alt="catshark" width="150" height="100">
+                        </div>
+                        <div class="front">
+                            <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
+                            <p class="card-class">Card</p>
+                        </div>
+                    </div>
+                
+                    <div class="memory-card" data-attribute="datepalm">
+                        <div class="back">
+                            <img src="date_tree.webp" alt="datepalm" width="150" height="100">
+                        </div>
+                        <div class="front">
+                            <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
+                            <p class="card-class">Card</p>
+                        </div>
+                    </div>
+                
+                    <div class="memory-card" data-attribute="datepalm">
+                        <div class="back">
+                            <img src="date_tree.webp" alt="datepalm" width="150" height="100">
+                        </div>
+                        <div class="front">
+                            <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
+                            <p class="card-class">Card</p>
+                        </div>
+                    </div>
+                
+                    <div class="memory-card" data-attribute="tiger" id="card6">
+                        <div class="back">
+                            <img src="great_tiger.jpeg" alt="tiger" width="150" height="100">
+                        </div>
+                        <div class="front">
+                            <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
+                            <p class="card-class">Card</p>
+                        </div>
+                    </div>
+                
+                    <div class="memory-card" data-attribute="crocodile" id="card7">
+                        <div class="back">
+                            <img src="gnarly_crocodile.webp" alt="crocodile" width="150" height="100">
+                        </div>
+                        <div class="front">
+                            <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
+                            <p class="card-class">Card</p>
+                        </div>
+                    </div>
+
+                    <div class="game-logo">
+                        <div class="game-logo-back">
+                        </div>
+                        <div class="game-logo-front">
+                            <p class="IM-title"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p></p>
+                            <p class="match-title">Match</p>
+                        </div>
+                    </div>
+
+                    <div class="memory-card" data-attribute="dog">
+                        <div class="back">
+                            <img src="happydog.webp" alt="dog" width="150" height="100">
+                        </div>
+                        <div class="front">
+                            <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
+                            <p class="card-class">Card</p>
+                        </div>
+                    </div>
+                
+                    <div class="memory-card" data-attribute="boy">
+                        <div class="back">
+                            <img src="suprised_boy.webp" alt="boy" width="150" height="100">
+                        </div>
+                        <div class="front">
+                            <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
+                            <p class="card-class">Card</p>
+                        </div>
+                    </div>
+                
+                    <div class="memory-card" data-attribute="crocodile">
+                        <div class="back">
+                            <img src="gnarly_crocodile.webp" alt="crocodile" width="150" height="100">
+                        </div>
+                        <div class="front">
+                            <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
+                            <p class="card-class">Card</p>
+                        </div>
+                    </div>
+                
+                    <div class="memory-card" data-attribute="boy">
+                        <div class="back">
+                            <img src="suprised_boy.webp" alt="boy" width="150" height="100">
+                        </div>
+                        <div class="front">
+                            <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
+                            <p class="card-class">Card</p>
+                        </div>
+                    </div>
+                
+                    <div class="memory-card" data-attribute="dog">
+                        <div class="back">
+                            <img src="happydog.webp" alt="dog" width="150" height="100">
+                        </div>
+                        <div class="front">
+                            <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
+                            <p class="card-class">Card</p>
+                        </div>
+                    </div>
+
+                    <div class="memory-card" data-attribute="mouse">
+                        <div class="back">
+                            <img src="wireless_mouse.webp" alt="dog" width="150" height="100">
+                        </div>
+                        <div class="front">
+                            <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
+                            <p class="card-class">Card</p>
+                        </div>
+                    </div>
+
+                    <div class="memory-card" data-attribute="mouse">
+                        <div class="back">
+                            <img src="wireless_mouse.webp" alt="dog" width="150" height="100">
+                        </div>
+                        <div class="front">
+                            <p class="IM-class"><span id="capital-i-id">I</span><span id="capital-m-id">M</span></p>
+                            <p class="card-class">Card</p>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
-    </body>
+    </div>
+    <script src="cards.js"></script>
+</body>
 </html>

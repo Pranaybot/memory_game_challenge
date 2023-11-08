@@ -1,10 +1,10 @@
 * {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    margin:0;
-    padding:0;
-}
+  }
 
-.main-container {
+  .main-container {
     text-align: center;
     margin: 220px auto;
 }
@@ -53,60 +53,57 @@
     cursor:pointer;
 }
 
-body {
-    background-color: #D8E6F3;
-}
-
-.cards {
-    border:1px solid rgb(23, 23, 138);
-    padding-top:260px;
-    padding-bottom:314px;
-}
-
-.card-container{
-    padding-top:40px;
-    padding-bottom:40px;
-    margin-top:-220px;
-    margin-bottom: -244px;
+.memory-game {
+    border:1px solid rgb(201, 193, 193);
+    border-radius: 10px;
+    width: 1300px;
+    height: 700px;
+    margin: auto;
     display: flex;
+    flex-wrap: wrap;
+    margin-top:65px;
+    margin-left: 115px;
+    perspective: 1000px;
+    background-color: rgb(196, 190, 186);
 }
 
-.card-extra-container {
-    border:1px solid brown;
-    border-radius: 8px;
-    border-width: 3px;
-    margin-right:1400px;
-    margin-left:355px;
-    padding:25px 50px;
-    background-color:rgb(214, 209, 209);
+.memory-card, .game-logo {
+    border: 2px solid saddlebrown;
+    width: calc(20% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    box-shadow: 1px 1px 1px rgba(218, 209, 209, 0.768);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+  }
+
+
+.front {
+    border: 3px solid seagreen;
+
 }
 
-.card-first-extra-container, .card-second-extra-container, 
-.card-third-extra-container {
-    display: inline-flex;
+.back {
+    border: 5px solid rgb(39, 109, 239);
+    transform: rotateY(180deg);
 }
 
-.card-first-extra-container {
-    border-left: 2px solid rgb(240, 189, 143);
-    border-top: 2px solid rgb(240, 189, 143);
-    border-right: 2px solid rgb(240, 189, 143);
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
 }
 
-.card-second-extra-container {
-    border-left: 2px solid rgb(240, 189, 143);
-    border-right: 2px solid rgb(240, 189, 143);
+.back img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
-.card-third-extra-container {
-    border-left: 2px solid rgb(240, 189, 143);
-    border-right: 2px solid rgb(240, 189, 143);
-    border-bottom: 2px solid rgb(240, 189, 143);
-}
-
-#card1, #card2, #card3, #card4, #card5, #card6, #card7, #card8, #card9
-,#card10, #card11, #card12, #card13, #card14, #time {
+.front {
     padding:45px 45px;
-    margin: 50.5px 30px;
     border: 1px solid darkgray;
     border-radius:2px;
     background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
@@ -114,20 +111,8 @@ body {
             linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
 }
 
-.card-extra-sheet-container {
-    border: 4px solid rgb(144, 180, 194);
-    border-radius: 5px;
-    margin:10px 20px;
-}
-
-.card-first-extra-container, .card-second-extra-container, 
-.card-third-extra-container {
-    background-color:rgb(206, 193, 193);
-}
-
-.IM-class {
+.IM-class, .card-class {
     text-align: center;
-    margin-top:-40px;
 }
 
 .card-class {
@@ -152,12 +137,63 @@ body {
     font-size: 35px;
 }
 
-#time {
-    border:none;
+.memory-card.flip {
+    transform: rotateY(180deg);
+  }
+
+.IM-title, .match-title {
+    font-family: Josefin Sans;
     text-align: center;
-    font-size: 46.5px;
-    padding-right:20x;
-    font-family:'Cochin';
-    background: none;
-    color:#7C4F91;
+}
+
+.match-title {
+    letter-spacing: 3px;
+    font-size: 22px;
+}
+
+.game-logo {
+    padding-top:60px;
+    border: none;
+    box-shadow: 1px 1px 1px rgba(169, 157, 157, 0.768);
+}
+
+body {
+    background-color: #D8E6F3;
+}
+
+.main{
+    padding-top:60px;
+    padding-bottom: 38px;
+}
+
+.outer-container {
+    border: 3px solid rgb(56, 71, 85);
+    border-radius: 8px;
+    margin-top:-5px;
+    margin-right:180px;
+    margin-left:180px;
+}
+
+.memory-container {
+    border: 4px solid rgb(207, 176, 19);
+    padding-bottom: 60px;
+    background-color:#d7e6e9
+}
+
+.outer-container, .memory-container{
+    margin: 5px auto;
+    width:100%;
+    max-width:1400px;
+}
+
+.memory-container {
+    margin-top:-1px;
+    margin-bottom:-1px;
+}
+
+.memory-game{
+    margin: 5px auto;
+    width:100%;
+    max-width: 1200px;
+    margin-top:45px;
 }

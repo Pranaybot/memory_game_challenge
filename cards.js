@@ -1,9 +1,52 @@
-const startButton = document.querySelector('#start');
+const cards = document.querySelectorAll('.memory-card');
 
-startButton.addEventListener('click', function(event) {
-    window.location.href = "cards_copy.html";
-});
+let hasFlippedCard = false;
+let lockBoard = false;
+let firstCard, secondCard;
 
-function preventBack() { window.history.forward(); }  
-setTimeout("preventBack()", 0);  
-window.onunload = function () { null }; 
+function flipCard() {
+    if (lockBoard) return;
+    if (this === firstCard) return;
+
+    this.classList.add('flip');
+
+    if (!hasFlippedCard) {
+      hasFlippedCard = true;
+      firstCard = this;
+      return;
+    }
+
+    secondCard = this;
+
+    checkForMatch();
+}
+
+function checkForMatch() {
+    let isMatch = firstCard.dataset.attribute === secondCard.dataset.attribute;
+    console.log(firstCard.dataset.attribute);
+    console.log(secondCard.dataset.attribute);
+    isMatch ? disableCards() : unflipCards();
+  }
+ 
+function disableCards() {
+    firstCard.removeEventListener('click', flipCard);
+    secondCard.removeEventListener('click', flipCard);
+
+    resetBoard();
+}
+
+function unflipCards() {
+    lockBoard = true;
+    setTimeout(() => {
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
+        resetBoard();
+    }, 1500);
+}
+
+function resetBoard() {
+    [hasFlippedCard, lockBoard] = [false, false];
+    [firstCard, secondCard] = [null, null];
+}
+
+cards.forEach(card => card.addEventListener('click', flipCard));
