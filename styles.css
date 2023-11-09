@@ -1,12 +1,13 @@
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
   }
 
-  .main-container {
+.main-container {
     text-align: center;
-    margin: 220px auto;
+    margin: 48px auto;
 }
 
 .extra-container {
@@ -70,7 +71,7 @@
 .memory-card, .game-logo {
     border: 2px solid saddlebrown;
     width: calc(20% - 10px);
-    height: calc(33.333% - 10px);
+    height: calc(33.33% - 10px);
     margin: 5px;
     position: relative;
     box-shadow: 1px 1px 1px rgba(218, 209, 209, 0.768);
@@ -141,16 +142,6 @@
     transform: rotateY(180deg);
   }
 
-.IM-title, .match-title {
-    font-family: Josefin Sans;
-    text-align: center;
-}
-
-.match-title {
-    letter-spacing: 3px;
-    font-size: 22px;
-}
-
 .game-logo {
     padding-top:60px;
     border: none;
@@ -162,14 +153,14 @@ body {
 }
 
 .main{
-    padding-top:60px;
-    padding-bottom: 38px;
+    padding-top:30px;
+    padding-bottom: 20px;
 }
 
 .outer-container {
     border: 3px solid rgb(56, 71, 85);
     border-radius: 8px;
-    margin-top:-5px;
+    margin-top:5px;
     margin-right:180px;
     margin-left:180px;
 }
@@ -183,7 +174,7 @@ body {
 .outer-container, .memory-container{
     margin: 5px auto;
     width:100%;
-    max-width:1400px;
+    max-width:1200px;
 }
 
 .memory-container {
@@ -194,6 +185,22 @@ body {
 .memory-game{
     margin: 5px auto;
     width:100%;
-    max-width: 1200px;
-    margin-top:45px;
+    max-width: 1100px;
+    margin-top:30px;
+    height: 520px;
+    margin-bottom: -25px;
 }
+
+#countdown {
+    display: inline-flex;
+    align-items: center;
+    justify-content:center;
+    font-size:50px;
+    height: 70px;
+    width: 220px;
+    margin-top:-12px;
+    margin-left:-5px;
+    color:rgb(161, 102, 102);
+    font-weight:300;
+}
+
