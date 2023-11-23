@@ -30,12 +30,12 @@
     font-size: 180px;
 }
 
-.best-score, #start{
+.best-score, #start, #reset{
     font-family: 'Josefin Sans';
 }
 
 .best-score {
-    margin-top:60px;
+    margin-top:30px;
     font-size: 30px;
     color:#B367B6;
 }
@@ -44,13 +44,30 @@
     margin:30px 30px;
 }
 
+.game-options {
+    display: flex;
+    margin-left:110px;
+    margin-top:47px;
+}
+
 #start {
     padding:15px 100px;
-    text-transform: uppercase;
     background-color:#5CA7EA;
     border:1px solid #5CA7EA;
-    border-radius: 5px;
+    color:rgb(78, 100, 190);
+}
+
+#reset {
+    padding:15px 80px;
+    background-color:#d69898;
+    border:1px solid #d69898;
     color:#F7E1E1;
+    margin-top:30px;
+}
+
+#start, #reset {
+    text-transform: uppercase;
+    border-radius: 5px;
     cursor:pointer;
 }
 
@@ -77,8 +94,7 @@
     box-shadow: 1px 1px 1px rgba(218, 209, 209, 0.768);
     transform-style: preserve-3d;
     transition: transform .5s;
-  }
-
+}
 
 .front {
     border: 3px solid seagreen;

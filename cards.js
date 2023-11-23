@@ -1,4 +1,5 @@
-const cards = document.querySelectorAll('.memory-card');
+const cards = Array.from(document.querySelector('.memory-game').children);
+const cardContainer = document.querySelector('.memory-game');
 const savedTimes = localStorage.getItem("times") ? JSON.parse(localStorage.getItem("times")) : [];
 const countdownEl = document.querySelector('#countdown');
 
@@ -54,7 +55,7 @@ function checkForMatch() {
     let isMatch = firstCard.dataset.attribute === secondCard.dataset.attribute;
     isMatch ? disableCards() : unflipCards();
 }
- 
+
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
@@ -119,6 +120,56 @@ function resetBoard() {
     [firstCard, secondCard] = [null, null];
 }
 
+function shuffleWithFixedElement(arr) {
+    // Store the fixed element (the fifth element)
+    const fixedElement = arr[7];
+    // Remove the fixed element from the array
+    arr.splice(7, 1);
+  
+    // Helper function to shuffle an array
+    function shuffle(array) {
+      let currentIndex = array.length, randomIndex;
+  
+      // While there remain elements to shuffle
+      while (currentIndex !== 0) {
+        // Pick a remaining element
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+  
+        // Skip swapping if it involves the fixed element
+        if (randomIndex !== 7 && currentIndex !== 7) {
+          [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+        }
+      }
+      return array;
+    }
+  
+    // Shuffle the array (excluding the fixed element)
+    const shuffledArray = shuffle(arr);
+  
+    // Insert the fixed element back at its original position
+    shuffledArray.splice(7, 0, fixedElement);
+  
+    return shuffledArray;
+}
+
+// Function to render shuffled cards
+function renderCards(cards) {
+  
+    // Clear existing cards
+    cardContainer.innerHTML = '';
+  
+    // Create and append card elements to the container
+    cards.forEach(card => {
+      cardContainer.appendChild(card);
+    });
+    return Array.from(cardContainer.children);
+}
+
+const randomCards = renderCards(shuffleWithFixedElement(cards.slice()));
+
 setInterval(updateCountdown, 1000);
 
-cards.forEach(card => card.addEventListener('click', flipCard));
+randomCards.forEach(card => card.addEventListener('click', flipCard));
+
+
