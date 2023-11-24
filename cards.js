@@ -3,8 +3,10 @@ const cardContainer = document.querySelector('.memory-game');
 const savedTimes = localStorage.getItem("times") ? JSON.parse(localStorage.getItem("times")) : [];
 const countdownEl = document.querySelector('#countdown');
 
+/*
 const startingMinutes = 3;
 let time = startingMinutes * 60;
+*/
 
 let hasFlippedCard = false;
 let lockBoard = false;
